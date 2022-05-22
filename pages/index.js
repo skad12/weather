@@ -1,7 +1,7 @@
 import Head from "next/Head";
 import { useState } from "react";
 
-function weather() {
+function Weather() {
   const [city, setCity] = useState();
   const [wData, setWData] = useState();
 
@@ -136,4 +136,4 @@ function weather() {
   );
 }
 
-export default weather;
+export default Weather;
