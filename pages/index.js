@@ -11,22 +11,6 @@ function Weather() {
     fetchWeatherData();
   };
 
-  // const options = {
-  //   method: "GET",
-  //   url: "https://weatherapi-com.p.rapidapi.com/current.json",
-  //   params: { q: "paris" },
-  //   headers: {
-  //     "X-RapidAPI-Host": "weatherapi-com.p.rapidapi.com",
-  //     "X-RapidAPI-Key": "20ae1ffb34msha3d26d229344cb7p175cb3jsnd43821e99d02",
-  //   },
-  // };
-
-  // promises
-
-  // async / await
-
-  // request methods, VERBS
-  // GET, PUT, DELETE, POST
   const fetchWeatherData = async () => {
     const res = await fetch(
       `https://weatherapi-com.p.rapidapi.com/current.json?q=${city}`,
@@ -99,17 +83,17 @@ function Weather() {
           <div className="px-6 space-y-2 bg-black rounded-lg w-72 pt-7">
             <div className="flex justify-between text-xs">
               <div>CLOUD</div>
-              <div>{wData ? wData.current.cloud : null}%</div>
+              <div>{wData ? wData.current.cloud : null} Oktas</div>
             </div>
 
             <div className="flex justify-between text-xs">
               <div>HUMIDITY</div>
-              <div>{wData ? wData.current.humidity : null}</div>
+              <div>{wData ? wData.current.humidity : null} (g/m3)</div>
             </div>
 
             <div className="flex justify-between text-xs">
               <div>WIND</div>
-              <div>{wData ? wData.current.wind_mph : null}mph</div>
+              <div>{wData ? wData.current.wind_mph : null} mph</div>
             </div>
 
             <form onSubmit={handleSubmit} className="pt-10 space-y-6">
